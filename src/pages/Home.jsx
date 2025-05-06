@@ -6,7 +6,7 @@ import Section5 from './../Component/HomeComponent/Section5'
 const ProductSlider = () => {
 
 return (
-    <div className="px-4 py-8 w-[97%] mx-auto">
+    <div className="px-6 py-8 w-[95%] mx-auto">
 
 
       <Section1 />

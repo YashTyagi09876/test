@@ -80,7 +80,7 @@ const ProductSlider = () => {
   const filteredProducts = getFilteredProducts();
 
   return (
-    <div className="h-auto">
+    <div className="h-auto ">
       {/* Tabs */}
       <div className="border-b border-[#797979] flex items-center justify-between mb-4 ">
         <div className="flex   space-x-6">
@@ -99,7 +99,7 @@ const ProductSlider = () => {
           ))}
         </div>
 
-        <Link to ="/product"
+        <Link to="/product"
           className="lg:text-[23px] md:text-[13px]  text-[10px]  text-[#333333] hover:text-black flex items-center"
         >
           View All Products <span className="ml-1">›</span>
@@ -107,7 +107,7 @@ const ProductSlider = () => {
       </div>
 
       {/* Products Grid */}
-      <div className="grid  grid-cols-1 md:grid-cols-3  lg:grid-cols-4  xl:grid-cols-6 gap-2  pb-4 scrollbar-hide">
+      <div className=" w-full grid  grid-cols-1 md:grid-cols-3  lg:grid-cols-4  xl:grid-cols-6 gap-2   pb-4 scrollbar-hide">
         {filteredProducts.map((product, index) => (
           <div
             key={index}
@@ -128,7 +128,7 @@ const ProductSlider = () => {
                 </span>
                 <span className="bg-gray-200 px-3 rounded-full">{product.tags}</span>
               </div>
-              <div className=" w-full flex  justify-between items-center  mb-3">
+              <div className=" w-full flex  justify-between items-center  mb-2">
 
                 <div className="flex items-center gap-2">
                   <p className="md:text-[17px] text-[12px]  font-bold text-[#000000]">
@@ -148,7 +148,7 @@ const ProductSlider = () => {
                 </div>
               </div>
               <hr />
-              <div className="absolute -bottom-5 gap-1 left-0 w-full  border-t border-gray-200 bg-white text-[#5D5D5D] px-4 py-2 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-900 rounded-2xl">
+              <div className=" absolute -bottom-5 gap-1 left-0 w-full  border-t border-gray-200 bg-white text-[#5D5D5D] px-2 py-2 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-900 rounded-b-2xl">
                 <button className="flex items-center text-sm hover:text-black">
                   <span className="mr-1"><CiHeart size={16} /></span> Add to Wishlist
                 </button>

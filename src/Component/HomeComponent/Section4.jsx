@@ -16,7 +16,7 @@ const products = [
     price: 4029.5,
     oldPrice: 8029.5,
     tag: "NEW",
-    tags:"BEST SELLER",
+    tags: "BEST SELLER",
     image: image1,
   },
   {
@@ -25,7 +25,7 @@ const products = [
     price: 73529.5,
     oldPrice: 8029.5,
     tag: "NEW",
-    tags:"BEST SELLER",
+    tags: "BEST SELLER",
     image: image2,
   },
   {
@@ -34,7 +34,7 @@ const products = [
     price: 3529.5,
     oldPrice: 6029.5,
     tag: "New",
-    tags:"BEST SELLER",
+    tags: "BEST SELLER",
     image: image3,
   },
   {
@@ -43,7 +43,7 @@ const products = [
     price: 3529.5,
     oldPrice: 6029.5,
     tag: "NEW",
-    tags:"2024 Edition",
+    tags: "2024 Edition",
     image: image4,
   },
   {
@@ -52,8 +52,8 @@ const products = [
     price: 32529.5,
     oldPrice: 6029.5,
     tag: "NEW",
-    tags:"2024 Edition",
-    image:image5,
+    tags: "2024 Edition",
+    image: image5,
   },
   {
     title: "Flight Controller",
@@ -61,8 +61,8 @@ const products = [
     price: 52529.5,
     oldPrice: 8029.5,
     tag: "NEW",
-    tags:"BESTAirPods",
-    image:image6,
+    tags: "BESTAirPods",
+    image: image6,
   },
 ];
 
@@ -79,7 +79,7 @@ const ProductSlider = () => {
   const filteredProducts = getFilteredProducts();
 
   return (
-    <div className="h-auto">
+    <div className="h-auto ">
       {/* Tabs */}
       <div className="border-b border-[#797979] flex items-center justify-between mb-4 ">
         <div className="flex   space-x-6">
@@ -128,21 +128,29 @@ const ProductSlider = () => {
                 </span>
                 <span className="bg-gray-200 px-3 rounded-full">{product.tags}</span>
               </div>
-              <div className="flex items-center space-x-2 mb-3 justify-">
-                <div className='flex items-center gap-2'>
-                  <p className="text-[17px] font-bold text-[#000000]">
+              <div className=" w-full flex  justify-between items-center  mb-2">
+
+                <div className="flex items-center gap-2">
+                  <p className="md:text-[17px] text-[12px]  font-bold text-[#000000]">
                     ₹{product.price.toLocaleString("en-IN")}
                   </p>
                   <p className="text-sm line-through text-gray-400">
                     ₹{product.oldPrice.toLocaleString("en-IN")}
                   </p>
                 </div>
-                <span className='items-end rounded-full group-hover:bg-[#336570] py-3 px-3 bg-white  border border-[#797979]'><IoBagOutline size={18} className='group-hover:text-white text-black' /></span>
+                <div className="flex justify-end items-end">
+                  <span className="rounded-full group-hover:bg-[#336570] justify-between py-3 px-3  bg-white border border-[#797979]">
+                    <IoBagOutline
+                      size={15}
+                      className="group-hover:text-white text-black"
+                    />
+                  </span>
+                </div>
               </div>
               <hr />
-              <div className="absolute -bottom-5 gap-1 left-0 w-full  border-t border-gray-200 bg-white text-[#5D5D5D] px-4 py-2 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-900 rounded-2xl">
+              <div className="absolute -bottom-6 gap-1 left-0 w-full  border-t border-gray-200 bg-white text-[#5D5D5D] px-2 py-2 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-900 rounded-b-2xl">
                 <button className="flex items-center text-sm hover:text-black">
-                  <span className="mr-1"><CiHeart size={16}/></span> Add to Wishlist
+                  <span className="mr-1"><CiHeart size={16} /></span> Add to Wishlist
                 </button>
                 <button className="flex items-center text-sm hover:text-black">
                   <span className="mr-1">🛒</span> Buy Now
