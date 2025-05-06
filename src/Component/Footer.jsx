@@ -42,7 +42,7 @@ const Footer = () => {
             {/* Column 1 */}
             <div className="mb-4 md:mb-0">
               <h3 className="font-semibold mb-2 text-xs md:text-sm lg:text-base">SHOPPING SERVICES</h3>
-              <ul className="space-y-2 md:space-y-4 text-xs sm:text-sm md:text-base">
+              <ul className="space-y-2 md:space-y-4 text-xs sm:text-sm md:text-[18px]">
                 <li>Propellers</li>
                 <li>PCBs</li>
                 <li>Drone Parts</li>
