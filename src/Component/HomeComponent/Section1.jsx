@@ -123,7 +123,7 @@ const ProductSlider = () => {
                 className="w-full h-24 object-contain mb-4"
               />
               <div className="flex items-center flex-wrap gap-2 mb-2">
-                <span className="bg-[#f7941d] text-white text-[14px] font-semibold px-3 py-1 rounded-full">
+                <span className="bg-[#f7941d] text-white md:text-[14px]  lg:text-[10px] font-semibold px-3 py-1 rounded-full">
                   {product.tag}
                 </span>
                 <span className="bg-gray-200 px-3 rounded-full">{product.tags}</span>
@@ -131,7 +131,7 @@ const ProductSlider = () => {
               <div className=" w-full flex  justify-between items-center  mb-3">
 
                 <div className="flex items-center gap-2">
-                  <p className="text-[17px]  font-bold text-[#000000]">
+                  <p className="md:text-[17px] text-[12px]  font-bold text-[#000000]">
                     ₹{product.price.toLocaleString("en-IN")}
                   </p>
                   <p className="text-sm line-through text-gray-400">
