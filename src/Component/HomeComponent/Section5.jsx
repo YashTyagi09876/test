@@ -81,26 +81,28 @@ export default function RaspberrySlider() {
   const slide = slides[current];
  
   return (
-    <div className="flex flex-col items-center justify-center px-4 py-10 bg-white md:px-10 lg:px-16">
-      <div className="w-full  flex gap-10 h-[406px]  items-center">
+    <div className="flex flex-col  items-center justify-center  py-10 bg-white md:px-6 lg:px-10 ">
+      <div className="w-full  flex gap-10 lg:h-[406px] h-auto items-center">
         {/* Left Slide */}
-        <div className="w-[80%] h-full bg-[#002F6C] rounded-xl  p-4 text-white flex flex-col justify-center relative">
-          <h2 className="text-[57.11px] font-bold mb-1 ">{slide.title}</h2>
+        <div className="lg:w-[80%] w-full  h-full bg-[#002F6C] rounded-xl  p-4 text-white flex flex-col relative ">
+          <div className='px-6 pt-2'>
+          <h2 className="lg:text-[57.11px] md:text-[40px]  font-bold mb-1 ">{slide.title}</h2>
           <p className="text-xl text-cyan-400 mb-6">{slide.subtitle}</p>
           <p className="text-base font-medium mb-1">Starting From</p>
           <p className="text-4xl font-bold text-white mb-6">{slide.price}</p>
           <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full w-36 text-sm">
             Shop Now
           </button>
+          </div>
           <img
             src={slide.image}
             alt="Raspberry Slide"
-            className="absolute  rotate-360 tranform scale-x-[-1] top-1/2 transform -translate-y-1/2  right-0 object-contain bottom-0 rounded-2xl w-[600px]"
+            className="absolute  rotate-360 tranform scale-x-[-1]     right-0 object-contain bottom-0  rounded-2xl xl:w-[600px] sm:w-[400px] w-[200px]   "
           />
         </div>
  
         {/* Right Product Card */}
-        <div className="w-[20%] h-full bg-white p-4 flex justify-center items-center">
+        <div className="w-[20%] h-full bg-white p-4 lg:flex justify-center items-center hidden  ">
           <div className="border border-gray-200 rounded-lg p-4 w-full max-w-xs">
             <div className="relative mb-4">
               <img
