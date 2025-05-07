@@ -115,7 +115,7 @@ export default function DronePartsCarousel() {
     };
 
     return (
-        <div className="flex flex-col md:flex-row w-full h-auto font-[system-ui] p-6 gap-8 py-10 bg-white">
+        <div className="flex flex-col md:flex-row w-full  h-auto font-[system-ui] gap-8 py-16 bg-white">
             {/* Left Section */}
             <div
                 className="md:w-1/3 w-full bg-gray-50 p-6 rounded-3xl shadow-sm flex flex-col bg-cover bg-center"
@@ -184,7 +184,7 @@ export default function DronePartsCarousel() {
                         {getVisibleProducts().map((product, index) => (
                             <div
                                 key={index}
-                                className="group border border-[#c2c2c2] rounded-2xl shadow-sm hover:shadow-md transition-all duration-500 md:h-[305px] h-auto hover:h-[325px] cursor-pointer"
+                                className="group border border-[#c2c2c2] rounded-2xl shadow-sm hover:shadow-md transition-all duration-500 h-[300px]  hover:h-[315px] cursor-pointer"
                             >
                                 <div className="p-4 flex flex-col items-start relative h-full">
                                     <p className="text-[10px] font-semibold text-[#D9D3D3] mb-1">
@@ -206,17 +206,18 @@ export default function DronePartsCarousel() {
                                             {product.tags}
                                         </span>
                                     </div>
-                                    <div className="w-full flex flex-col md:flex-row justify-between items-center mb-3">
+                                    <div className=" w-full flex  justify-between items-center  mb-2">
+
                                         <div className="flex items-center gap-2">
-                                            <p className="md:text-[17px] text-[10px] font-bold text-[#000000]">
+                                            <p className="lg:text-[15px] text-[12px]  font-bold text-[#000000]">
                                                 ₹{product.price.toLocaleString("en-IN")}
                                             </p>
-                                            <p className="md:text-sm text-[10px] line-through text-gray-400">
+                                            <p className="text-sm line-through text-gray-400">
                                                 ₹{product.oldPrice.toLocaleString("en-IN")}
                                             </p>
                                         </div>
                                         <div className="flex justify-end items-end">
-                                            <span className="rounded-full group-hover:bg-[#336570] justify-between md:py-3 md:px-3 p-2 bg-white border border-[#797979]">
+                                            <span className="rounded-full group-hover:bg-[#336570] justify-between py-3 px-3  bg-white border border-[#797979]">
                                                 <IoBagOutline
                                                     size={15}
                                                     className="group-hover:text-white text-black"
@@ -225,7 +226,7 @@ export default function DronePartsCarousel() {
                                         </div>
                                     </div>
                                     <hr />
-                                    <div className="absolute -bottom-5 gap-1 left-0 w-full border-t border-gray-200 bg-white text-[#5D5D5D] px-4 py-2 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-900 rounded-2xl">
+                                    <div className="absolute bottom-4 gap-1 left-0 w-full border-t border-gray-200 bg-white text-[#5D5D5D] px-4 py-2 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-900 rounded-b-2xl">
                                         <button className="flex items-center text-sm hover:text-black">
                                             <span className="mr-1"><CiHeart size={16} /></span> Add to Wishlist
                                         </button>
