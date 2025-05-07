@@ -7,6 +7,7 @@ import image4 from '../../assets/homepage4.png'
 import image5 from '../../assets/homepage5.png'
 import image6 from '../../assets/homepage6.png'
 import { CiHeart } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 const tabs = ['Featured', 'On Sale', 'Top Rated'];
 
 const products = [
@@ -98,20 +99,19 @@ const ProductSlider = () => {
           ))}
         </div>
 
-        <a
-          href="/products"
+        <Link to="/product"
           className="lg:text-[23px] md:text-[13px]  text-[10px]  text-[#333333] hover:text-black flex items-center"
         >
           View All Products <span className="ml-1">›</span>
-        </a>
+        </Link>
       </div>
 
       {/* Products Grid */}
-      <div className="grid  sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4  xl:grid-cols-6 gap-2  pb-4 scrollbar-hide">
+      <div className=" w-full grid  grid-cols-1 md:grid-cols-2  lg:grid-cols-3  xl:grid-cols-6  gap-2   pb-4 scrollbar-hide">
         {filteredProducts.map((product, index) => (
           <div
             key={index}
-            className="group border border-[#c2c2c2] rounded-2xl shadow-sm hover:shadow-md transition-all duration-500 h-[300px] hover:h-[320px] cursor-pointer">
+            className="group border border-[#c2c2c2] rounded-2xl shadow-sm hover:shadow-md transition-all duration-500 lg:h-[300px] hover:h-[320px] h-[330px] cursor-pointer">
             <div className="p-4 flex flex-col items-start relative">
               <p className="text-[14px] font-semibold text-[#D9D3D3] mb-1">{product.brand}</p>
               <h2 className="text-[18px] font-bold text-[#1E3473] mb-2">
@@ -123,7 +123,7 @@ const ProductSlider = () => {
                 className="w-full h-24 object-contain mb-4"
               />
               <div className="flex items-center flex-wrap gap-2 mb-2">
-                <span className="bg-[#f7941d] text-white text-[14px] font-semibold px-3 py-1 rounded-full">
+                <span className="bg-[#f7941d] text-white md:text-[14px]  lg:text-[10px] font-semibold px-3 py-1 rounded-full">
                   {product.tag}
                 </span>
                 <span className="bg-gray-200 px-3 rounded-full">{product.tags}</span>
@@ -131,7 +131,7 @@ const ProductSlider = () => {
               <div className=" w-full flex  justify-between items-center  mb-2">
 
                 <div className="flex items-center gap-2">
-                  <p className="md:text-[17px] text-[12px]  font-bold text-[#000000]">
+                  <p className="lg:text-[15px] text-[12px]  font-bold text-[#000000]">
                     ₹{product.price.toLocaleString("en-IN")}
                   </p>
                   <p className="text-sm line-through text-gray-400">
@@ -148,7 +148,7 @@ const ProductSlider = () => {
                 </div>
               </div>
               <hr />
-              <div className="absolute -bottom-6 gap-1 left-0 w-full  border-t border-gray-200 bg-white text-[#5D5D5D] px-2 py-2 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-900 rounded-b-2xl">
+              <div className=" absolute -bottom-5 gap-1 left-0 w-full border-t border-gray-200 bg-white text-[#5D5D5D] px-2 py-2 flex justify-between items-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-900 rounded-b-2xl">
                 <button className="flex items-center text-sm hover:text-black">
                   <span className="mr-1"><CiHeart size={16} /></span> Add to Wishlist
                 </button>

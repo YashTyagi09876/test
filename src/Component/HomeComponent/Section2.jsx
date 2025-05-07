@@ -115,7 +115,7 @@ export default function DronePartsCarousel() {
     };
 
     return (
-        <div className="flex flex-col md:flex-row w-full h-full font-[system-ui] gap-8 py-10 bg-white">
+        <div className="flex flex-col md:flex-row w-full  h-auto font-[system-ui] gap-8 py-16 bg-white">
             {/* Left Section */}
             <div
                 className="md:w-1/3 w-full bg-gray-50 p-6 rounded-3xl shadow-sm flex flex-col bg-cover bg-center"
@@ -209,7 +209,7 @@ export default function DronePartsCarousel() {
                                     <div className=" w-full flex  justify-between items-center  mb-2">
 
                                         <div className="flex items-center gap-2">
-                                            <p className="md:text-[17px] text-[12px]  font-bold text-[#000000]">
+                                            <p className="lg:text-[15px] text-[12px]  font-bold text-[#000000]">
                                                 ₹{product.price.toLocaleString("en-IN")}
                                             </p>
                                             <p className="text-sm line-through text-gray-400">
