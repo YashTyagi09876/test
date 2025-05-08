@@ -10,32 +10,37 @@ import {
 import { IoMdArrowDropdown } from "react-icons/io";
 import location1 from "../assets/location.png";
 import { FaShoppingBag } from "react-icons/fa";
-import logo from "../assets/logo.png";
+import logo from "../assets/Logo.png";
 import shipping from "../assets/shipping.png";
 import icon1 from "../assets/Icon1.png";
-import icon2 from "../assets/icon2.png";
+import icon2 from "../assets/Icon2.png";
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showLocationDropdown, setShowLocationDropdown] = useState(false);
   const [location, setLocation] = useState("Delhi, India");
+  const navigate = useNavigate();
+  const { uniqueItems, cartItems } = useCart();
 
   const navItems = [
     {
       name: "Products",
       key: "products",
       items: ["All Products", "New Arrivals", "Best Sellers"],
+      links: ["/product", "/new-arrivals", "/best-sellers"]
     },
     {
       name: "Catalog",
       key: "catalog",
       items: ["Categories", "PDF Download"],
+      links: ["/categories", "/download-catalog"]
     },
     {
       name: "Popular items",
       key: "popular",
       items: ["Trending", "Top Rated"],
+      links: ["/trending", "/top-rated"]
     },
   ];
 
@@ -55,10 +60,10 @@ const Navbar = () => {
       {/* Top Blue Bar */}
       <div className="bg-[#1E3473] text-white text-sm px-4 py-2 flex justify-between items-center font-[Outfit]">
         <div className="space-x-4 hidden md:flex">
-          <span>Store Location</span>
-          <span>Services</span>
-          <span>Subscribe</span>
-          <span>Gift Cards</span>
+          <Link to="/store-location" className="hover:text-[#F7941D]">Store Location</Link>
+          <Link to="/services" className="hover:text-[#F7941D]">Services</Link>
+          <Link to="/subscribe" className="hover:text-[#F7941D]">Subscribe</Link>
+          <Link to="/gift-cards" className="hover:text-[#F7941D]">Gift Cards</Link>
         </div>
         <div className="hidden lg:flex items-center text-[15px]">
           <img src={shipping} alt="Shipping" className="w-5 h-5 mr-2" />
@@ -80,9 +85,9 @@ const Navbar = () => {
       <div className="font-inter bg-white border-b shadow-sm">
         <div className="mx-auto px-4 py-3 flex items-center justify-between lg:px-16 md:px-12">
           {/* Logo */}
-          <div className="flex items-center gap-3 w-36 md:w-40">
+          <Link to="/" className="flex items-center gap-3 w-36 md:w-40">
             <img src={logo} alt="Logo" className="w-full" />
-          </div>
+          </Link>
 
           {/* Search Bar + Location */}
           <div className="hidden lg:flex flex-1 mx-6 items-center gap-10">
@@ -138,15 +143,26 @@ const Navbar = () => {
           <div className="flex items-center gap-4 text-gray-600">
             <div className="flex items-center space-x-4">
               {/* Shopping Bag Icon */}
-              <div className="bg-gray-100 p-3 rounded-full">
+              <div 
+                className="bg-gray-100 p-3 rounded-full relative cursor-pointer"
+                onClick={() => navigate('/cart')}
+              >
                 <img src={icon1} className="w-5 h-5" alt="Cart" />
+                {uniqueItems > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-[#F7941D] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                    {uniqueItems}
+                  </span>
+                )}
               </div>
 
               {/* Divider */}
               <div className="w-px h-6 bg-gray-300"></div>
 
               {/* User Icon */}
-              <div className="bg-gray-100 p-3 rounded-full">
+              <div 
+                className="bg-gray-100 p-3 rounded-full cursor-pointer"
+                onClick={() => navigate('/account')}
+              >
                 <img src={icon2} className="w-5 h-5" alt="User" />
               </div>
             </div>
@@ -161,9 +177,9 @@ const Navbar = () => {
         {/* Bottom Nav */}
         <div className="bg-white hidden  md:block ">
           <div className="  md:mx-auto px-4 py-2 flex items-center space-x-4 text-sm font-medium  whitespace-nowrap lg:px-16 md:px-12">
-            <a href="#" className="hover:text-white hover:bg-blue-900 px-3 py-1 rounded-full">
+            <Link to="/" className="hover:text-white hover:bg-blue-900 px-3 py-1 rounded-full">
               HOME
-            </a>
+            </Link>
             {navItems.map((item) => (
               <div className="relative" key={item.key}>
                 <button
@@ -176,21 +192,22 @@ const Navbar = () => {
                 {openDropdown === item.key && (
                   <div className="absolute top-10 left-0 bg-white shadow-lg rounded-md py-2 w-40 z-50">
                     {item.items.map((subItem, idx) => (
-                      <a
-                        href="#"
+                      <Link
+                        to={item.links[idx]}
                         key={idx}
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        onClick={() => setOpenDropdown("")}
                       >
                         {subItem}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}
               </div>
             ))}
-            <a href="#" className="text-gray-700 hover:text-white hover:bg-blue-900 px-3 py-1 rounded-full">
+            <Link to="/pcb" className="text-gray-700 hover:text-white hover:bg-blue-900 px-3 py-1 rounded-full">
               PCB
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -202,26 +219,27 @@ const Navbar = () => {
               placeholder="Search..."
               className="w-full border border-gray-300 px-3 py-2 rounded-md"
             />
-            <a href="#" className="block">
+            <Link to="/" className="block py-2 hover:text-[#F7941D]">
               HOME
-            </a>
+            </Link>
             {navItems.map((item) => (
-              <div key={item.key}>
+              <div key={item.key} className="py-1">
                 <p className="font-semibold text-gray-700">{item.name}</p>
                 {item.items.map((subItem, idx) => (
-                  <a
-                    href="#"
+                  <Link
+                    to={item.links[idx]}
                     key={idx}
-                    className="block pl-4 py-1 text-gray-600 hover:text-blue-700"
+                    className="block pl-4 py-1 text-gray-600 hover:text-[#F7941D]"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     {subItem}
-                  </a>
+                  </Link>
                 ))}
               </div>
             ))}
-            <a href="#" className="block">
+            <Link to="/pcb" className="block py-2 hover:text-[#F7941D]">
               PCB
-            </a>
+            </Link>
           </div>
         )}
       </div>

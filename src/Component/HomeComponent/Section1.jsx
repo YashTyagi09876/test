@@ -81,7 +81,7 @@ const ProductSlider = () => {
   const filteredProducts = getFilteredProducts();
 
   return (
-    <div className="h-auto py-10 ">
+    <div className="h-auto lg:h-[450px] py-10 ">
       {/* Tabs */}
       <div className="border-b border-[#797979] flex items-center justify-between mb-4 ">
         <div className="flex   space-x-6">
@@ -161,7 +161,7 @@ const ProductSlider = () => {
               </div>
               <div className=" w-full flex  justify-between items-center  mb-2">
 
-                <div className="flex items-center gap-2 group-hover:hidden ">
+                <div className="flex items-center gap-2 group-hover:hidden mb-2">
                   <p className="lg:text-[17px] text-[12px]  font-bold text-[#000000]">
                     ₹{product.price.toLocaleString("en-IN")}
                   </p>
