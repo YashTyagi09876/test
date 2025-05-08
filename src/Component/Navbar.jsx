@@ -10,7 +10,7 @@ import {
 import { IoMdArrowDropdown } from "react-icons/io";
 import location1 from "../assets/location.png";
 import { FaShoppingBag } from "react-icons/fa";
-import logo from "../assets/logo.png";
+import logo from "../assets/Logo.png";
 import shipping from "../assets/shipping.png";
 import icon1 from "../assets/Icon1.png";
 import icon2 from "../assets/Icon2.png";
