@@ -13,7 +13,7 @@ import { FaShoppingBag } from "react-icons/fa";
 import logo from "../assets/logo.png";
 import shipping from "../assets/shipping.png";
 import icon1 from "../assets/Icon1.png";
-import icon2 from "../assets/Icon2.png";
+import icon2 from "../assets/icon2.png";
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState("");

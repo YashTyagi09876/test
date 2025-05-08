@@ -179,7 +179,7 @@ const ProductSlider = () => {
                 </div> */}
               </div>
               <hr />
-              <div className=" absolute -bottom-5 gap-1 left-0 w-full border-t border-gray-200 bg-white text-[#5D5D5D] px-2 py-2 flex justify-between items-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-900 rounded-b-2xl">
+              <div className=" absolute -bottom-4 gap-1 left-0 w-full border-t border-gray-200 bg-white text-[#5D5D5D] px-2 py-2 flex justify-between items-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-900 rounded-b-2xl">
                 <div className="  text-sm hover:text-black">
                 Get it <span className='text-black'> Friday,</span> Jan 18
                 <span className="mr-1">   FREE Delivery</span> 
