@@ -67,7 +67,7 @@ const Cart = () => {
             </button>
             <span className="text-base">
               Back to products | Listed in category:{" "}
-              <span className="font-semibold">All Products</span>
+              <Link to="/product" className="font-semibold hover:text-[#f7941d]">All Products</Link>
             </span>
             <div className="text-[#2F294D] pl-0 md:pl-10 font-semibold whitespace-nowrap">
               My Cart
@@ -92,7 +92,12 @@ const Cart = () => {
                 </div>
                 <div className="flex justify-between w-full h-32">
                   <div className="flex flex-row justify-between items-start w-full">
-                    <h3 className="font-medium text-[#2F294D] text-lg">{item.name}</h3>
+                    <h3 
+                      className="font-medium text-[#2F294D] text-lg cursor-pointer hover:text-[#f7941d]"
+                      onClick={() => navigate(`/product/${item.id}`)}
+                    >
+                      {item.name}
+                    </h3>
                   </div>
                   <div className="flex flex-col h-full items-end justify-between">
                     <span className="font-bold text-[#1E3473] text-xl">₹ {item.price.toLocaleString()}</span>
