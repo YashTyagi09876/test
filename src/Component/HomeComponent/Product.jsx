@@ -336,7 +336,7 @@ const Product = () => {
               ))}
             </div>
             <Link
-              to="/product"
+              to="/product2"
               className="text-sm md:text-base lg:text-lg text-[#333333] hover:text-black flex items-center"
             >
               View All Products <span className="ml-1">›</span>
