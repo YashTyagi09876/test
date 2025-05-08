@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+
+body {
+    font: font-outfit;
+    
+  }
+  
+  /* font-family: Inter; */
