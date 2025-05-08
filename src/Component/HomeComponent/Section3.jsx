@@ -7,8 +7,8 @@ const PromoSection = () => {
     return (
         <div className=" w-full    py-10   flex flex-col lg:flex-row gap-6 ">
             {/* Left Main Card */}
-            <div className='md:w-1/2 w-full relative'>
-                <div className="lg:col-span-1 bg-[#1e293b] rounded-2xl text-white flex  justify-between p-6 ">
+            <div className='md:w-1/2  w-full relative'>
+                <div className="lg:col-span-1 bg-[#1e293b] rounded-2xl text-white flex  justify-between p-6 h-[390px] ">
                     <div className='md:w-1/2 w-full'>
                         <p className="text-[23.13px] mb-2">Rasberry Pie</p>
                         <h2 className="lg:text-[58.45px] md:text-[30px] text-2xl font-bold leading-tight mb-2">Case BB-3</h2>
@@ -22,7 +22,7 @@ const PromoSection = () => {
                         <img
                             src={image7}
                             alt="Case BB-3"
-                            className='rotate-180 tranform scale-x-[-1] right-0 object-contain absolute bottom-0 lg:w-[280px] w-[180px] rounded-2xl'
+                            className='rotate-180 tranform scale-x-[-1] right-0 object-contain absolute bottom-0 lg:w-[400px] w-[180px] rounded-2xl'
                         />
                     </div>
                 </div>
@@ -41,7 +41,7 @@ const PromoSection = () => {
                        </div>
                         <img
                             src={ image8}
-                            className="md:w-40 w-28 h-auto object-contain absolute right-0 bottom-0" />
+                            className="md:w-56 w-28 h-auto object-contain absolute -right-4 bottom-0" />
                     </div>
 
                     {/* Card 2 */}

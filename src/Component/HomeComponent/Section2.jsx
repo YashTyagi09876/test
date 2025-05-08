@@ -52,6 +52,16 @@ const products = [
         tags: "BEST SELLER",
         image: image4,
     },
+    {
+        title: "Mi Air3s",
+        brand: "Airpod",
+        category: "Propellers",
+        price: 4029.50,
+        oldPrice: 8029.50,
+        tag: "NEW",
+        tags: "BEST SELLER",
+        image: image4,
+    },
 ];
 
 export default function DronePartsCarousel() {
@@ -70,7 +80,7 @@ export default function DronePartsCarousel() {
                 setItemsToShow(2);
             } else {
                 // Desktop
-                setItemsToShow(3);
+                setItemsToShow(4);
             }
         };
 
@@ -115,7 +125,7 @@ export default function DronePartsCarousel() {
     };
 
     return (
-        <div className="flex flex-col md:flex-row w-full  h-auto font-[system-ui] gap-8 py-16 bg-white">
+        <div className="flex flex-col md:flex-row w-full  lg:h-[550px] font-[system-ui] gap-8 py-16 bg-white">
             {/* Left Section */}
             <div
                 className="md:w-1/3 w-full bg-gray-50 p-6 rounded-3xl shadow-sm flex flex-col bg-cover bg-center"
@@ -180,7 +190,7 @@ export default function DronePartsCarousel() {
                     )}
 
                     {/* Carousel Cards */}
-                    <div className={`grid gap-4 ${itemsToShow === 1 ? 'grid-cols-1' : itemsToShow === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
+                    <div className={`grid gap-4 ${itemsToShow === 1 ? 'grid-cols-1' : itemsToShow === 2 ? 'grid-cols-2' : 'grid-cols-4'}`}>
                         {getVisibleProducts().map((product, index) => (
                             <div
                                 key={index}
@@ -226,11 +236,11 @@ export default function DronePartsCarousel() {
                                         </div>
                                     </div>
                                     <hr />
-                                    <div className="absolute bottom-4 gap-1 left-0 w-full border-t border-gray-200 bg-white text-[#5D5D5D] px-4 py-2 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-900 rounded-b-2xl">
-                                        <button className="flex items-center text-sm hover:text-black">
+                                    <div className="absolute bottom-2 gap-1 left-0  w-full border-t border-gray-200 bg-white text-[#5D5D5D] px-4 py-2 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-900 rounded-b-2xl">
+                                        <button className="flex items-center text-[12px] hover:text-black">
                                             <span className="mr-1"><CiHeart size={16} /></span> Add to Wishlist
                                         </button>
-                                        <button className="flex items-center text-sm hover:text-black">
+                                        <button className="flex items-center text-[12px] hover:text-black">
                                             <span className="mr-1">🛒</span> Buy Now
                                         </button>
                                     </div>
