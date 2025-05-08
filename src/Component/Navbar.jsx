@@ -14,7 +14,8 @@ import logo from "../assets/Logo.png";
 import shipping from "../assets/shipping.png";
 import icon1 from "../assets/Icon1.png";
 import icon2 from "../assets/Icon2.png";
-
+import { useCart } from "../context/CartContext";
+import { useNavigate,Link} from "react-router-dom";
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -175,8 +176,8 @@ const Navbar = () => {
         </div>
 
         {/* Bottom Nav */}
-        <div className="bg-white hidden  md:block ">
-          <div className="  md:mx-auto px-4 py-2 flex items-center space-x-4 text-sm font-medium  whitespace-nowrap lg:px-16 md:px-12">
+        <div className="bg-white  hidden  md:block  ">
+          <div className="    md:mx-auto px-4 py-2 flex items-center space-x-4 text-sm font-medium  whitespace-nowrap lg:px-16 md:px-12 ">
             <Link to="/" className="hover:text-white hover:bg-blue-900 px-3 py-1 rounded-full">
               HOME
             </Link>

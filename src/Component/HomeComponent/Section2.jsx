@@ -125,7 +125,7 @@ export default function DronePartsCarousel() {
     };
 
     return (
-        <div className="flex flex-col md:flex-row w-full  lg:h-[550px] font-[system-ui] gap-8 py-16 bg-white">
+        <div className="flex flex-col md:flex-row w-full  lg:h-[510px] font-[system-ui] gap-8 py-16 bg-white">
             {/* Left Section */}
             <div
                 className="md:w-1/3 w-full bg-gray-50 p-6 rounded-3xl shadow-sm flex flex-col bg-cover bg-center"

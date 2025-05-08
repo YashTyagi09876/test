@@ -10,6 +10,7 @@ import image2 from "./../assets/homepage8.png";
 import vector3 from "./../assets/Vector3.png";
 import Section5 from "./../Component/HomeComponent/Section5";
 import image8 from "../assets/homepage8.png";
+import image9 from "../assets/homepage9.png";
 import icon4 from "../assets/icon4.png";
 import image10 from "../assets/homepage10.png";
 const ProductSlider = () => {
@@ -65,15 +66,15 @@ const ProductSlider = () => {
         <div className="md:w-1/2  w-full">
           <img
             src={image7}
-            className="rotate-180 tranform scale-x-[-1] right-4 object-contain absolute -bottom-12    lg:w-[450px] md:w-[350px]  w-[150px] rounded-2xl"
+            className="rotate-180 tranform scale-x-[-1] right-4 object-contain absolute lg:-bottom-12 -bottom-4    lg:w-[450px] md:w-[350px]  w-[150px] rounded-2xl"
           />
         </div>
       </div>
 
       {/* Bottom Categories */}
-      <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-between items-center ">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-between items-center ">
         <div className="flex-1 bg-[#E0E0E0] shadow-md rounded-xl p-4 flex items-center  gap-6 justify-between w-full relative">
-          <div className="text-sm h-[76px] ">
+          <div className="text-sm h-[60px] ">
             <span className="text-[#555555]">
               CATCH BIG <span className="text-[#1E3473]">DEALS</span>ON
             </span>
@@ -82,10 +83,10 @@ const ProductSlider = () => {
           </div>
 
           <img
-            src={image8}
-            className="w-[204px] h-[124px]object-contain absolute right-6 -top-4"
+            src={image9}
+            className="w-[210px] md:h-[160px] h-[120px] object-contain absolute md:right-6 -right-3 md:-top-16 -top-8"
           />
-          <img src={icon4} className=" right w-10 h-5" />
+          <img src={icon4} className=" right w-8 h-5" />
         </div>
 
         <div className="flex-1 bg-[#E0E0E0] shadow-md rounded-xl p-4 flex items-center  gap-6 justify-between w-full relative">
@@ -99,9 +100,9 @@ const ProductSlider = () => {
 
           <img
             src={image8}
-            className="w-[204px] h-[124px]object-contain absolute right-6 -top-4"
+            className="w-[210px] lg:h-[150px] h-[120px] object-contain absolute md:right-6 right-6 lg:-top-10 -top-4"
           />
-          <img src={icon4} className=" right w-10 h-5" />
+          <img src={icon4} className=" right w-8 h-5" />
         </div>
 
         <div className="flex-1 bg-[#E0E0E0] shadow-md rounded-xl p-4 flex items-center  gap-6 justify-between w-full relative">
@@ -115,9 +116,9 @@ const ProductSlider = () => {
 
           <img
             src={image10}
-            className="w-[200px] h-[124px] object-contain absolute right-6 -top-2 bottom-4"
+                className="w-[210px] lg:h-[150px] h-[120px] object-contain absolute md:right-6 right-10 lg:-top-10 -top-4"
           />
-          <img src={icon4} className=" right w-10 h-5" />
+          <img src={icon4} className=" right w-8 h-5" />
         </div>
       </div>
 
