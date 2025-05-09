@@ -6,7 +6,9 @@ import Footer  from './Component/Footer'
 import Product from './Component/HomeComponent/Product'
 import SingleProduct from './Component/HomeComponent/SingleProduct'
 import Cart from './Component/Cart/Cart'
-import { CartProvider } from './context/cartContext';
+import Thanku from "./Component/HomeComponent/Thanku";
+import Profile from "./Component/HomeComponent/Profile";
+import { CartProvider } from "./context/CartContext";
 
 const App = () => { 
   return (
@@ -19,6 +21,8 @@ const App = () => {
           <Route path="/product" element={<Product/>} />
           <Route path="/product/:id" element={<SingleProduct/>} />
           <Route path="/cart" element={<Cart/>} />
+          <Route path="/thanku" element={<Thanku/>} />
+          <Route path="/profile" element={<Profile/>} />
         </Routes>
         <Footer/>
       </Router>

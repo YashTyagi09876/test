@@ -18,7 +18,7 @@ const products = [
     price: 4029.5,
     oldPrice: 8029.5,
     tag: "BUY NOW",
-    tags: "AAd to cart",
+    tags: "Add to cart",
     image: image1,
   },
   {
@@ -27,7 +27,7 @@ const products = [
     price: 73529.5,
     oldPrice: 8029.5,
     tag: "BUY NOW",
-    tags: "AAd to cart",
+    tags: "Add to cart",
     image: image2,
   },
   {
@@ -36,7 +36,7 @@ const products = [
     price: 3529.5,
     oldPrice: 6029.5,
     tag: "BUY NOW",
-    tags: "AAd to cart",
+    tags: "Add to cart",
     image: image3,
   },
   {
@@ -45,7 +45,7 @@ const products = [
     price: 3529.5,
     oldPrice: 6029.5,
     tag: "BUY NOW",
-    tags: "AAd to cart",
+    tags: "Add to cart",
     image: image4,
   },
   {
@@ -54,7 +54,7 @@ const products = [
     price: 32529.5,
     oldPrice: 6029.5,
     tag: "BUY NOW",
-    tags: "AAd to cart",
+    tags: "Add to cart",
     image: image5,
   },
   {
@@ -63,7 +63,7 @@ const products = [
     price: 52529.5,
     oldPrice: 8029.5,
     tag: "BUY NOW",
-    tags: "AAd to cart",
+    tags: "Add to cart",
     image: image6,
   },
 ];

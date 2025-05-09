@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import shop from "../../assets/shop.png";
-import { servicesData } from "./data";
-import { useCart } from "../../context/cartContext";
+// import { servicesData } from "./data";
+import { useCart } from "../../context/CartContext";
 
 export default function ProductCard() {
   const [product, setProduct] = useState(null);
