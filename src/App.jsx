@@ -8,7 +8,8 @@ import SingleProduct from './Component/HomeComponent/SingleProduct'
 import Cart from './Component/Cart/Cart'
 import Thanku from "./Component/HomeComponent/Thanku";
 import Profile from "./Component/HomeComponent/Profile";
-import { CartProvider } from "./context/CartContext.jsx";
+import { CartProvider } from "./context/CartContext";
+
 
 
 const App = () => { 
