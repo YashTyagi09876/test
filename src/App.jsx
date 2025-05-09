@@ -10,6 +10,7 @@ import Thanku from "./Component/HomeComponent/Thanku";
 import Profile from "./Component/HomeComponent/Profile";
 import { CartProvider } from "./context/CartContext";
 
+
 const App = () => { 
   return (
     <CartProvider>
